@@ -1,0 +1,4 @@
+node_modules
+dist
+src/repositories/indexExample.ts
+src/repositories/config/config.json
