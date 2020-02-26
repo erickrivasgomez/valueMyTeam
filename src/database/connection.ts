@@ -1,14 +1,13 @@
 
 import { Sequelize } from 'sequelize-typescript';
-import { Answer } from './models/Answer';
-import { Question } from './models/Question';
+import { Resource } from './models/Resource';
  
 const sequelize =  new Sequelize({
-        database: 'vmaDB',
+        database: 'vmtDB',
         dialect: 'mssql',
-        username: 'vmaDEV',
+        username: 'vmtDEV',
         port: 54321,
         password: '_Development01@',
-        models: [Answer, Question], 
+        models: [Resource], 
 });
 export { sequelize }

@@ -1,4 +1,4 @@
-import questionRepository from '../repositories/questionRepository'
+// import questionRepository from '../repositories/questionRepository'
 import { Router } from 'express'
 
 export const questionController = Router()

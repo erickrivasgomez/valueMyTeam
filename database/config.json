@@ -1,8 +1,8 @@
 {
   "development": {
-    "username": "vmaDEV",
+    "username": "vmtDEV",
     "password": "_Development01@",
-    "database": "vmaDB",
+    "database": "vmtDB",
     "host": "127.0.0.1",
     "dialect": "mssql",
     "port":"54321",
