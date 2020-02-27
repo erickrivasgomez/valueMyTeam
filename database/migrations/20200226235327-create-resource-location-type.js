@@ -10,14 +10,6 @@ module.exports = {
       },
       price: {
         type: Sequelize.DOUBLE
-      },
-      createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
       }
     });
   },

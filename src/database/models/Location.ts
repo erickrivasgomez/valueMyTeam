@@ -1,7 +1,7 @@
 import {Table, Column, Model, PrimaryKey, DataType} from 'sequelize-typescript';
 
 @Table
-export class Resource extends Model<Resource> {
+export class Location extends Model<Location> {
 
   @PrimaryKey
   @Column(DataType.NUMBER)
@@ -14,6 +14,3 @@ export class Resource extends Model<Resource> {
   description: Text;
  
 }
-
-
-
