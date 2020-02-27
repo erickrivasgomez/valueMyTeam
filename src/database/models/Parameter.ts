@@ -1,4 +1,4 @@
-import {Table, Column, Model, PrimaryKey, DataType} from 'sequelize-typescript';
+import { Table, Column, Model, PrimaryKey, DataType, CreatedAt, UpdatedAt } from 'sequelize-typescript';
 
 @Table
 export class Parameter extends Model<Parameter> {
@@ -12,5 +12,14 @@ export class Parameter extends Model<Parameter> {
 
   @Column(DataType.NUMBER)
   value: number;
- 
+
+  @CreatedAt
+  @Column(DataType.DATE)
+  createdAt: Date
+
+  @UpdatedAt
+  @Column(DataType.DATE)
+  updatedAt: Date
+
+
 }

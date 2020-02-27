@@ -1,4 +1,4 @@
-import {Table, Column, Model, PrimaryKey, DataType} from 'sequelize-typescript';
+import { Table, Column, Model, PrimaryKey, DataType, CreatedAt, UpdatedAt } from 'sequelize-typescript';
 
 @Table
 export class Location extends Model<Location> {
@@ -12,5 +12,13 @@ export class Location extends Model<Location> {
 
   @Column(DataType.TEXT)
   description: Text;
- 
+
+  @CreatedAt
+  @Column(DataType.DATE)
+  createdAt: Date
+
+  @UpdatedAt
+  @Column(DataType.DATE)
+  updatedAt: Date
+
 }

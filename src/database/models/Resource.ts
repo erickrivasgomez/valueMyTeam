@@ -1,4 +1,4 @@
-import {Table, Column, Model, PrimaryKey, DataType} from 'sequelize-typescript';
+import { Table, Column, Model, PrimaryKey, DataType, CreatedAt, UpdatedAt } from 'sequelize-typescript';
 
 @Table
 export class Resource extends Model<Resource> {
@@ -11,8 +11,16 @@ export class Resource extends Model<Resource> {
   name: string;
 
   @Column(DataType.TEXT)
-  description: Text;
- 
+  description: string;
+
+  @CreatedAt
+  @Column(DataType.DATE)
+  createdAt: Date
+
+  @UpdatedAt
+  @Column(DataType.DATE)
+  updatedAt: Date
+
 }
 
 

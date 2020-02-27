@@ -1,4 +1,4 @@
-import {Table, Column, Model, PrimaryKey, DataType, ForeignKey} from 'sequelize-typescript';
+import { Table, Column, Model, PrimaryKey, DataType, ForeignKey, BelongsTo, CreatedAt, UpdatedAt } from 'sequelize-typescript';
 import { Location } from './Location';
 import { Parameter } from './Parameter';
 
@@ -10,11 +10,23 @@ export class Parameter_location extends Model<Parameter_location> {
   id: number
 
   @ForeignKey(() => Location)
-  @Column(DataType.INTEGER)
+  @Column
   locationId: number;
+  @BelongsTo(() => Location)
+  location: Location;
 
   @ForeignKey(() => Parameter)
-  @Column(DataType.INTEGER)
+  @Column
   parameterId: number;
- 
+  @BelongsTo(() => Parameter)
+  parameter: Parameter;
+
+  @CreatedAt
+  @Column(DataType.DATE)
+  createdAt: Date
+
+  @UpdatedAt
+  @Column(DataType.DATE)
+  updatedAt: Date
+
 }
