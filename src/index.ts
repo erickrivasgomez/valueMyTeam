@@ -5,7 +5,7 @@ import { sequelize } from './database/connection'
 import { resourceController } from './controllers/resourceController'
 
 
-const port = 9999
+const port = 1338
 
 const app = express()
 app.use(bodyParser.json())
@@ -16,61 +16,6 @@ app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
-
-let questions = [
-    {
-        "id": 1,
-        "content": "Which do prefer?",
-        "answers": [
-            {
-                "id": 1,
-                "content": "First",
-                "value": 1000,
-                "path": "./img/1.jpg"
-            },
-            {
-                "id": 2,
-                "content": "Second",
-                "value": 2000,
-                "path": "./img/1.jpg"
-            },
-            {
-                "id": 3,
-                "content": "Third",
-                "value": 3000,
-                "path": "./img/1.jpg"
-            }
-        ]
-    },
-    {
-        "id": 2,
-        "content": "Which do prefer?",
-        "answers": [
-            {
-                "id": 1,
-                "content": "First",
-                "value": 1000,
-                "path": "./img/1.jpg"
-            },
-            {
-                "id": 2,
-                "content": "Second",
-                "value": 2000,
-                "path": "./img/1.jpg"
-            },
-            {
-                "id": 3,
-                "content": "Third",
-                "value": 3000,
-                "path": "./img/1.jpg"
-            }
-        ]
-    },
-]
-
-app.get('/', (req, res) => {
-    res.send(questions)
-})
 
 let prices = [
     {
@@ -124,10 +69,8 @@ app.get('/prices', (req, res) => {
     res.send(prices)
 })
 
-app.listen(port, () => {
-    console.log("APi is running on port " + port)
-})
-app.use('/api2', resourceController)
+
+app.use('/vmt', resourceController)
 
 app.get('/', (req, res) => {
   res.send('API is running OK')

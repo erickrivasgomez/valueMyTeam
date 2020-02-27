@@ -11,7 +11,7 @@ export class Location extends Model<Location> {
   name: string;
 
   @Column(DataType.TEXT)
-  description: Text;
+  description: string;
 
   @CreatedAt
   @Column(DataType.DATE)
