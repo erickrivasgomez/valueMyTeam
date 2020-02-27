@@ -2,7 +2,7 @@ import express from 'express'
 import bodyParser from 'body-parser'
 import cors from 'cors';
 import { sequelize } from './database/connection'
-import { questionController } from './controllers/questionController'
+import { resourceController } from './controllers/resourceController'
 
 
 const port = 9999
@@ -127,7 +127,7 @@ app.get('/prices', (req, res) => {
 app.listen(port, () => {
     console.log("APi is running on port " + port)
 })
-app.use('/api', questionController)
+app.use('/api2', resourceController)
 
 app.get('/', (req, res) => {
   res.send('API is running OK')

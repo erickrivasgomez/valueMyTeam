@@ -1,7 +1,7 @@
 import { Table, Column, Model, PrimaryKey, DataType, CreatedAt, UpdatedAt } from 'sequelize-typescript';
 
 @Table
-export class Resource extends Model<Resource> {
+export class Location extends Model<Location> {
 
   @PrimaryKey
   @Column(DataType.NUMBER)
@@ -11,7 +11,7 @@ export class Resource extends Model<Resource> {
   name: string;
 
   @Column(DataType.TEXT)
-  description: string;
+  description: Text;
 
   @CreatedAt
   @Column(DataType.DATE)
@@ -22,6 +22,3 @@ export class Resource extends Model<Resource> {
   updatedAt: Date
 
 }
-
-
-
