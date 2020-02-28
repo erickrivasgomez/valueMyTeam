@@ -5,7 +5,7 @@ import { sequelize } from './database/connection'
 import { resourceController } from './controllers/resourceController'
 
 
-const port = 1338
+const port = 3006
 
 const app = express()
 app.use(bodyParser.json())

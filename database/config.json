@@ -1,11 +1,10 @@
 {
   "development": {
-    "username": "vmtDEV",
-    "password": "_Development01@",
-    "database": "vmtDB",
-    "host": "127.0.0.1",
+    "username": "valuemyteamdevdbusr",
+    "password": "v#.FJA+4jJ=9",
+    "database": "valuemyteamdevdb",
+    "host": "10.16.0.19",
     "dialect": "mssql",
-    "port":"54321",
     "operatorsAliases": false
   },
   "test": {
