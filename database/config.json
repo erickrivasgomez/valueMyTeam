@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "valuemyteamdevdbusr",
+    "password": "v#.FJA+4jJ=9",
+    "database": "valuemyteamdevdb",
+    "host": "10.16.0.19",
+    "dialect": "mssql",
+    "operatorsAliases": false
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  }
+}
